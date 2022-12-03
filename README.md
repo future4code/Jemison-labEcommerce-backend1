@@ -10,7 +10,7 @@ Neste projeto de revisão, criei uma API onde é possível criar entradas para a
 ### Stack
 
 - Typescript
-- Node
+- Node 
 - knex
 - express
 - mySQL
