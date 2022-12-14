@@ -1,0 +1,49 @@
+// Valida se a página retorna um array vazio, se nenhum dado é compatível com os parametros buscados e retorna todos caso
+// nenhum parametro seja fornecido
+GET http://localhost:3003/character?page=30
+
+
+###
+// 
+
+GET http://localhost:3003/movie?title=Paulo&page=300
+
+###
+// 
+
+GET http://localhost:3003/movie/20/characters/
+
+###
+
+GET http://localhost:3003/character/10/movies
+
+###
+// Valida se todos os parametros obrigatórios foram fornecidos e se gender está de acordo com as três opções de enum definidas
+
+PUT http://localhost:3003/character/
+Content-Type: application/json
+
+{
+    "name":"Pearl",
+    "gender":"JohN",
+    "description":"Please, I'm a starrrrrr!!!!!!!"
+}
+
+###
+
+PUT http://localhost:3003/movie/
+Content-Type: application/json
+
+{
+    "title":"",
+    "year":2020
+}
+
+###
+// Valida se o id foi passado como path param e se ele existe mesmo dentre os valores na tabela antes de rodar o delete
+
+DELETE http://localhost:3003/character/200
+
+###
+
+DELETE http://localhost:3003/movie/
